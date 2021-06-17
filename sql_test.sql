@@ -102,4 +102,7 @@ order by valor desc
 -- ser posible agregarlo de necesitarlo. Cambiaria todo los varchar a Varchar(255) para evirtar
 -- futuras complicaciones, de igual manera la memoria sera la misma.
 
---15 Windows
+--15 Utilicé windows function que mejoran notablemente la preformance para evitar self-joins
+-- y la complejidad. Tambien sé que existe sharding, que particiona la base de datos en 
+-- algun criterio que definamos, no lo he utilizado anteriormente. El ejemplo teorico
+--comun de sharding es para realizar un reporte de ventas en el cual particionas la base solo al ultimo mes
