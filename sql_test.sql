@@ -23,3 +23,9 @@ order by valor desc
 limit 1
 -- Hay que traer tanto el nombre como el apellido porque si filtras solo por apellido al tener null
 -- no aparece primero el correcto
+
+-- FOUR
+
+
+UPDATE JUGADORES
+SET posicion = REPLACE(posicion,"MC","MED");
