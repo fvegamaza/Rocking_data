@@ -48,3 +48,19 @@ ORDER BY anio
 SELECT VALOR,POSICION FROM JUGADORES
 ORDER BY VALOR DESC
 limit 1;
+
+--EIGHT
+
+SELECT DISTINCT POSICION, COUNT(ID_EQUIPO) AS Cantidad_Jugadores
+FROM JUGADORES
+GROUP BY POSICION
+order by Cantidad_Jugadores desc
+
+--nine
+SELECT count(JUGADORES.id_equipo) as cantidad_jugadores ,EQUIPOS.Nombre
+from jugadores
+inner join EQUIPOS
+  on EQUIPOS.id_equipo = JUGADORES.id_equipo
+group by EQUIPOS.Nombre
+order by cantidad_jugadores desc
+limit 2
