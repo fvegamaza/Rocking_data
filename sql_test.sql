@@ -26,6 +26,19 @@ limit 1
 
 -- FOUR
 
-
 UPDATE JUGADORES
 SET posicion = REPLACE(posicion,"MC","MED");
+
+
+-- FIVE
+SELECT valor,anio,nombre,apellido
+FROM JUGADORES
+where anio = 2020
+order by valor
+limit 1
+
+-- SIX
+SELECT AVG(valor),anio
+FROM JUGADORES
+GROUP BY anio
+ORDER BY anio
