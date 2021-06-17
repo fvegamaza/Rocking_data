@@ -86,4 +86,20 @@ order by valor desc
 -- que todo valor negativos es un error humanos, o solo deja insertar valores positivos y 0
 
 
---13
+--13 Desde un txt/csv se puede cargar los datos masivamente. Hasta 2gb lo he hecho
+-- Sé tambien que hay codigo de php que facilita la subida cuando lo archivos son inmensos
+-- pero no tuve la oportunidad de probarlo
+-- Desde python connectando la base tambien es posible cargarlo.
+-- Es decir, leer el archivo con python e insertarlo en tablas con mysql
+
+
+--14 La primary key es un error grave, estimo que seria la primera observación que haria
+-- Columnas como dorsal,nombre,apellido,anio no pueden ser nulos
+-- no comprendo porque la posicion es un char y no un varchar (mas teniendo en cuenta que
+-- la mayoria de posiciones son dos silabas). La pondria varchar(255)
+-- el id_equipo al ser la unica foreigh key deberia ser not null
+-- No comprendo porque paises tiene un varchar de 10, afghanistan tiene 11 espacios no va 
+-- ser posible agregarlo de necesitarlo. Cambiaria todo los varchar a Varchar(255) para evirtar
+-- futuras complicaciones, de igual manera la memoria sera la misma.
+
+--15 Windows
